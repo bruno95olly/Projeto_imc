@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC</title>
     <link type="text/css" href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="professor.js" defer></script>
 </head>
 <body>
     <header>
@@ -53,19 +53,19 @@
             <form>
                 <div class="campo">
                     <label>Nome:</label>
-                    <input id="nomePessoa" type="text">
+                    <input id="nomePessoa" type="text" required>
                 </div>
                 <div class="campo unidade" data-unidade="metros">
                     <label>Altura:</label>
-                    <input id="altura" type="text">
+                    <input id="altura" type="number" min="0" max="2.5" step="any" required>
                 </div>
                 <div class="campo unidade" data-unidade="quilos">
                     <label>Peso:</label>
-                    <input id="peso" type="text">
+                    <input id="peso" type="number" step="any" required>
                 </div>
                 <button id="imcBtn" type="button">CALCULAR</button>
                
-                    <div id="result"></div>
+                    <div id="result">Resultado:</div>
                 
             </form>
         </section>
@@ -75,4 +75,5 @@
         <span>Copyright &copy; 2021 | Fernando Leonid</span>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
 </html>
